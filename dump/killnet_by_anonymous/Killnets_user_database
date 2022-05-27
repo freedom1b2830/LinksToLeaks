@@ -1,0 +1,260 @@
+=========================================================================
+We the Anonymous share with you the database of the hacker group Killnet.
+
+ 
+
+MySQL database:
+- User
+- Password
+
+ 
+
+We do not forgive, we do not forget. Expect us KillNet!
+Greetings Anonymous.
+
+ 
+
+#FuckPutin #SlavaUkraini
+=========================================================================
+
+-- phpMyAdmin SQL Dump
+-- version 5.1.3
+-- https://www.phpmyadmin.net/
+--
+-- Хост: localhost
+-- Время создания: Мар 23 2022 г., 22:22
+-- Версия сервера: 5.6.39-83.1
+-- Версия PHP: 7.1.26
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- База данных: `cn89061_kill`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `attacks`
+--
+
+CREATE TABLE IF NOT EXISTS `attacks` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `userID` int(11) NOT NULL,
+  `target` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `port` int(11) NOT NULL,
+  `method` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `time` int(11) NOT NULL,
+  `time_end` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=43 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Дамп данных таблицы `attacks`
+--
+
+INSERT INTO `attacks` (`id`, `userID`, `target`, `port`, `method`, `time`, `time_end`) VALUES
+(1, 3, '195.201.201.32', 80, 'TCPTLS', 80, 1647548223),
+(2, 3, '195.201.201.32', 80, 'TCPTLS', 80, 1647548322),
+(3, 3, '195.201.201.32', 80, 'TCPTLS', 80, 1647549299),
+(4, 3, '195.201.201.32', 80, 'NTP', 80, 1647552340),
+(5, 3, '195.201.201.32', 80, 'TCPTLS', 80, 1647555220),
+(6, 3, '195.201.201.32', 80, 'TCPTLS', 80, 1647555301),
+(7, 3, '195.201.201.32', 80, 'TCPTLS', 80, 1647556574),
+(8, 3, '195.201.201.32', 2, 'WSD', 1000, 1647557719),
+(9, 3, '195.201.201.32', 80, 'TCPACK', 80, 1647613217),
+(10, 52, 'https://exitus.me', 80, 'tlsv2', 30, 1647957943),
+(11, 52, 'https://exitus.me', 80, 'tlsv1', 120, 1647958073),
+(12, 52, 'https://exitus.me', 80, 'tlsv1', 120, 1647962773),
+(14, 52, 'https://exloader.net', 80, 'tlsv1', 120, 1647963092),
+(15, 52, 'https://darkhacks.ru', 80, 'tlsv2', 300, 1647971172),
+(20, 70, '161.35.224.45', 80, 'WSD', 30, 1647974512),
+(25, 63, 'https://mazemazeinfo.work/', 80, 'tlsv1', 1200, 1647976256),
+(26, 2, 'https://omr.gov.ua', 80, 'tlsv2', 1200, 1648017525),
+(27, 2, '81.25.237.23', 443, 'SNMP', 1200, 1648019120),
+(28, 2, '81.25.237.23', 443, 'SNMP', 1200, 1648020480),
+(30, 2, 'https://zaborona.com', 80, 'tlsv1', 1200, 1648024724),
+(32, 2, 'https://pravyysektor.info', 80, 'tlsv2', 1200, 1648035996),
+(33, 2, 'https://pravyysektor.info', 80, 'tlsv2', 1200, 1648037477),
+(34, 2, 'https://pravyysektor.info', 80, 'tlsv2', 1200, 1648038769),
+(35, 2, 'https://khovk.org', 80, 'tlsv2', 1200, 1648043225),
+(41, 52, 'https://saverudata.org', 80, 'tlsv2', 120, 1648048743);
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `users`
+--
+
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `email` varchar(250) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `rate` int(11) NOT NULL DEFAULT '0',
+  `rate_end` int(11) DEFAULT NULL,
+  `api_key` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=147 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Дамп данных таблицы `users`
+--
+
+INSERT INTO `users` (`id`, `email`, `password`, `rate`, `rate_end`, `api_key`) VALUES
+(1, 'dkdkdk@mail.ru', 'dkfkfj', 1, 1650528426, ''),
+(2, 'carle.ea.wjo.k9.1@gmail.com', 'cl7gblCK', 3, 1650528426, '65850ae1d6fc87177e811235-a4c8929a'),
+(3, 'alga@mail.ru', '135531135531', 1, 1679062399, 'cddb17e852768022179e3d34-38f779d9'),
+(4, '123', '123', 0, NULL, '0'),
+(5, 'mar@ya.ru', '12345678', 0, NULL, '0'),
+(6, 'ta.tokarev@icloud.com', 'Otrix2109', 0, NULL, '0'),
+(7, 'batterist85@hotmail.it', 'Test1234567890!', 0, NULL, '0'),
+(8, 'yunus_akaunt5@mail.ru', 'Talkhatov777', 0, NULL, '0'),
+(9, 'Nadyo140@gmail.com', '42454245f5', 0, NULL, '0'),
+(10, 'feonever@mail.ru', 'Westcall123.', 0, NULL, '0'),
+(11, 'pirat21@list.ru', 'klaustrofobia7', 0, NULL, '0'),
+(12, 'huudd@bk.ru', 'Dream20love', 0, NULL, '0'),
+(13, 'susk18@bk.ru', 'Rhbvbyfkbcn1@', 0, NULL, '0'),
+(14, 'fenditop229@gmail.com', 'mama123mama12', 0, NULL, '0'),
+(15, 'killzane251@gmail.com', 'zxc789cxz', 0, NULL, '0'),
+(16, 'leonidkrivenyshev@mail.ru', 'cYPggvpQ84a*', 0, NULL, '0'),
+(17, 'fedoriginal@mail.ru', 'Setx-999.27', 0, NULL, '0'),
+(18, 'rinakartina22@gmail.com', 'Vfvf120480', 0, NULL, '0'),
+(19, 'minicra4ik@gmail.com', 'stivka1234', 0, NULL, '0'),
+(20, 'kenerykrp@mail.ru', 'Egida2202', 0, NULL, '0'),
+(21, 'kolaokunev0@gmail.com', 'qwert098', 0, NULL, '0'),
+(22, 'mixazy@gmail.com', 'Ibitot73!', 0, NULL, '0'),
+(23, 'alesahudaeva0145@gmail.com', 'AsJacobAs100', 0, NULL, '0'),
+(24, 'sfalken_83@protonmail.com', 'd52xr5YrDu4i67c', 0, NULL, '0'),
+(25, 'valerapley@yandex.ru', 'Valera123609', 0, NULL, '0'),
+(26, 'brawlgametopand666@gmail.com', 'brawlgame2011', 0, NULL, '0'),
+(27, 'jgdsxvjug@gmail.com', 'Hacker69', 0, NULL, '0'),
+(28, 'devin.perpetua@outlook.com', 'Perdak777@', 0, NULL, '0'),
+(29, 'worskrub@gmail.com', 'GalaxyS10Z', 0, NULL, '0'),
+(30, 'zuxplil@gmail.com', 'zuxplil1', 0, NULL, '0'),
+(31, 'serdyukov-m@inbox.ru', 'UM38N6av7t7ErZm', 0, NULL, '0'),
+(32, 'drawen2014@yandex.ru', 'Gitler124578', 0, NULL, '0'),
+(33, 'ipd4j7ca67t5@mail.ru', 'ZAGDFAIUdgiapdsa', 0, NULL, '0'),
+(34, 'vladisweb22@gmail.com', 'Vvvmail.com', 0, NULL, '0'),
+(35, 'riorioriow@gmail.com', 'rioriorio', 0, NULL, '0'),
+(36, 'agrr451@gmail.com', 'TheStint1', 0, NULL, '0'),
+(37, '2fnbhwa2@minimail.gq', 'Qwer4321', 0, NULL, '0'),
+(38, 'ga1netd1novden1s29@gmail.com', 'bi9YVYW3t82!', 0, NULL, '0'),
+(39, 'darkzeit00@gmail.com', 'FoVuWAhteeHm', 0, NULL, '0'),
+(40, 'wwebdav@bk.ru', 'aa246392', 0, NULL, '0'),
+(41, 'k7873499@gmail.com', 'mY5srYe3LuGhmgF', 0, NULL, '0'),
+(42, 'asmogame@yandex.ru', 'reniska1', 0, NULL, '0'),
+(43, 'rusellershop@gmail.com', 'Admin7820', 0, NULL, '0'),
+(44, 'whiteribbon999@gmail.com', 'Qwedcxzas!23@', 0, NULL, '0'),
+(45, 'ovnck@yandex.ru', '123nike456', 0, NULL, '0'),
+(46, 'kastanavk@gmail.com', '250803Uu', 0, NULL, '0'),
+(47, 'alex3evmack@yandex.ru', 'Lolkek34509113', 0, NULL, '0'),
+(48, 'jepeg41835@f1xm.com', 'jepeg41835@f1xm.com', 0, NULL, '0'),
+(49, 'xaxaxeiivolk@gmail.com', 'NokiaErtwq435', 0, NULL, '0'),
+(50, 'mimbo-007@mail.ru', '17031990Marina', 0, NULL, '0'),
+(51, 'mr.dis.official@gmail.com', 'mdm0726mdm', 0, NULL, '0'),
+(52, 'federalhacker@protonmail.com', 'LeOwUYR1', 1, 1650528426, '6a5283d747576e80978c083d-14d7c028'),
+(53, 'nayavov512@minimeq.com', '1234567890Qq', 0, NULL, '0'),
+(54, 'ruslanahmadeev329@gmail.com', 'Mersedes228556', 0, NULL, '0'),
+(55, 'matvey.medvedev2006@gmail.com', 'Pavlino2012!', 0, NULL, '0'),
+(56, 'smilefox155@gmail.com', '228903o00', 0, NULL, '0'),
+(57, 'xiw7gkwkmb@appzily.com', 'xiw7gkwkmb', 0, NULL, '0'),
+(58, 'erymin_2005@mail.ru', 'D1209er2005', 0, NULL, '0'),
+(59, 'LaureDurandogbv97@gmail.com', 'Love1234', 0, NULL, '0'),
+(60, 'inete.zarabatok@gmail.com', 'pashapro100', 0, NULL, '0'),
+(61, 'slabukha00@bk.ru', '123pasword123', 0, NULL, '0'),
+(62, 'nozo.75@mail.ru', 'zzz19752109', 0, NULL, '0'),
+(63, 'mgwa899q3k@popcornfarm7.com', '2550mgwa899q8**', 1, 1650632175, '9ac9a7d3d6e665fced7ab851-ce867101'),
+(64, 'hybiev23@mail.ru', 'Uvaisar0889', 0, NULL, '0'),
+(65, 'parkhaevdordan@yandex.ru', 'DorzhoSuperman52', 0, NULL, '0'),
+(66, 'killnetbam@banan.io', 'killnetbam@banan.io', 0, NULL, '0'),
+(67, 'stupedmen22@mail.ru', 'asd789dsa', 0, NULL, '0'),
+(68, 'burju1_osi@protonmail.com', 't\\dQL1SLJ2p9c\'ys)q9&BK>kJt', 0, NULL, '0'),
+(69, 'timur.kashapov.timur@mail.ru', 'dabuzu2303', 0, NULL, '0'),
+(70, 'unknownUser23@protonmail.com', 'pbChicken72', 1, 1650632175, '554754f2aed5ac5932a71512-3137b4cd'),
+(71, 'dmitrijhmelev53@gmail.com', 'alexivan', 0, NULL, '0'),
+(72, 'gametw2007@gmail.com', '159951WAL.', 0, NULL, '0'),
+(73, 'sky.masteer@bk.ru', 'ruvmin-gUzce5-waxfut', 0, NULL, '0'),
+(74, 'volodya.pytin.2044@gmail.com', 'volodya.0791', 0, NULL, '0'),
+(75, 'jedarib420@jo6s.com', 'LeRteBeU5wdwKcR', 0, NULL, '0'),
+(76, '79193010526@mail.ru', '19982209Dd', 0, NULL, '0'),
+(77, 'ladestphoenix@gmail.com', '3m7q1vhg5i', 0, NULL, '0'),
+(78, 'denis.burdanov@gmail.com', 'B159d260@', 0, NULL, '0'),
+(79, 'corolla123443@mail.ru', 'N3h8H2f8', 0, NULL, '0'),
+(80, 'dandyfiles22@protonmail.com', 'q45909prt!', 0, NULL, '0'),
+(81, 'gigs35rus@gmail.com', 'sumuvi33', 0, NULL, '0'),
+(82, 'prowebtor@gmail.com', '288795Aa@', 0, NULL, '0'),
+(83, 'nenahow@gmail.com', '3F3paqhRGPk6bTa', 0, NULL, '0'),
+(84, 'Npgskill@gmail.com', '9186564771Aa', 0, NULL, '0'),
+(85, 'agent007vlad@gmail.com', 'Wind476821', 0, NULL, '0'),
+(86, 'rushgamesa@gmail.com', 'tn05vkAz', 0, NULL, '0'),
+(87, 'qickclick@yandex.ru', 'AndPonchman1', 0, NULL, '0'),
+(88, 'fastburnout@gmail.com', 'pidaras123', 0, NULL, '0'),
+(89, 'perezexpress@mail.ru', 'Pisjka32321', 0, NULL, '0'),
+(90, '744qdpost@gmail.com', '744qdpost', 0, NULL, '0'),
+(91, 'soceretanyj68@gmail.com', 'anj12345(', 0, NULL, '0'),
+(92, 'mihailfloki123@gmail.com', '29122007', 0, NULL, '0'),
+(93, 'markfedoreev@icloud.com', 'FedoreevM2007', 0, NULL, '0'),
+(94, 'lohaloha@inbox.lv', 'Kazino777', 0, NULL, '0'),
+(95, 'miton0030@gmail.com', 'Mit242242', 0, NULL, '0'),
+(96, 'Sapphire.play@mail.ru', 'Shintaro2021', 0, NULL, '0'),
+(97, 'mazzz3r@gmail.com', 'Victor2517', 0, NULL, '0'),
+(98, 'ovh@lenta.ru', '100200xxcc', 0, NULL, '0'),
+(99, 'burlakaeduard06129@gmail.com', 'testtest92', 0, NULL, '0'),
+(100, 'theraspberryx@gmail.com', 'Aezakmi228', 0, NULL, '0'),
+(101, 'f4nin.ser@yandex.ru', '12041210Wot', 0, NULL, '0'),
+(102, 'kamicilya@mail.ru', 'dranishnikova0705olga', 0, NULL, '0'),
+(103, '32h5r3yeipaq@opayq.com', 'eMzfws4uejpT', 0, NULL, '0'),
+(104, 'helloworld@mailto.plus', 'Rapid7Rapid7', 0, NULL, '0'),
+(105, 'jonesklute@protonmail.com', 'niggerpaste1337', 0, NULL, '0'),
+(106, 'maxmenstandoff2@gmail.com', 'maxmen45', 0, NULL, '0'),
+(107, 'csgoadress@mail.ru', '15051286m', 0, NULL, '0'),
+(108, 'blackcodeonline@gmail.com', 'getgetget', 0, NULL, '0'),
+(109, 'freefire96422@gmail.com', 'yusha2006', 0, NULL, '0'),
+(110, 'Arma3armageddon@gmail.com', 'SNL787878', 0, NULL, '0'),
+(111, 'arseniy860@gmail.com', 'XzRaty969', 0, NULL, '0'),
+(112, 'ivlev.nikolai2017@yandex.ru', 'Sl1mesl1me235', 0, NULL, '0'),
+(113, 'eiph5aih6Yu4@jeemah6ooX2u.com', 'maid5De3Zieg', 0, NULL, '0'),
+(114, 'senya.kartysh@gmail.com', 'arsenii098', 0, NULL, '0'),
+(115, 'pricartrog.e.3.3.87@gmail.com', 'dsfhui32FF', 0, NULL, '0'),
+(116, 'ilichevboggdan@gmail.com', 'ilich0986', 0, NULL, '0'),
+(117, 'kapustinav27@gmail.com', 'Abnormal253', 0, NULL, '0'),
+(118, 'dannysdanil@yandex.ru', 'L3d4s1rdibil', 0, NULL, '0'),
+(119, '1and2yes@mail.ru', '67394008', 0, NULL, '0'),
+(120, 'matrosartem0704@gmail.com', 'artem133csgo', 0, NULL, '0'),
+(121, 'badger_games@bk.ru', 'Wendigo123', 0, NULL, '0'),
+(122, 'ggddhhg@yandex.ru', 'fghffhhfgh', 0, NULL, '0'),
+(123, 'by-defoo@yandex.ru', 'Q1754247qallqq', 0, NULL, '0'),
+(124, 'georgijbugonin@gmail.com', 'Lakepatzer12', 0, NULL, '0'),
+(125, 'kasirnikovaolga@gmail.com', 'kasirnikovaolga@gmail.com', 0, NULL, '0'),
+(126, 'kboy.official2003@gmail.com', 'Sierrq770', 0, NULL, '0'),
+(127, 'cyberstalker33@gmail.com', 'qwerty2002', 0, NULL, '0'),
+(128, 'pro1003a@yandex.ru', 'agg_09G123', 0, NULL, '0'),
+(129, 'sultandavlatov8@gmail.com', 'qwertylox56778', 0, NULL, '0'),
+(130, 'artemgemer567@gmail.com', 'Fhntv2566', 0, NULL, '0'),
+(131, 'mikprograms72@gmail.com', 'Sonya7272', 0, NULL, '0'),
+(132, 'soulless1941@yandex.ru', 'Diamant58', 0, NULL, '0'),
+(133, 'nail2004300118@mail.ru', '2004300118', 0, NULL, '0'),
+(134, 'ovladichka@bk.ru', '741852963Abc', 0, NULL, '0'),
+(135, 'filipovakmal@gmail.com', '96Mtg22R', 0, NULL, '0'),
+(136, 'st4ylander@bk.ru', 'DUAZ24112312', 0, NULL, '0'),
+(137, 'imptyprod@gmail.com', '6xwCnq7TcbLH6Lx', 0, NULL, '0'),
+(138, 'daforest.dom.digle@gmail.com', 'Lomba123142', 0, NULL, '0'),
+(139, 'misteev@icloud.com', 'bitfyz-tuwzeb-cecZy6', 0, NULL, '0'),
+(140, 'weed-01@mail.ru', 'akhmet2001', 0, NULL, '0'),
+(141, 'ilyxa05gg@gmail.com', 'kekerus228', 0, NULL, '0'),
+(142, 'li7474@mail.ru', '567i90Li', 0, NULL, '0'),
+(143, 'Mixaama2001102001@mail.ru', 'Anopcha200110', 0, NULL, '0'),
+(144, 'danilnov2323@gmail.com', 'danil2323', 0, NULL, '0'),
+(145, 'mrkekushka227@gmail.com', 'deusvult227', 0, NULL, '0'),
+(146, 'iadaniildapoy@vk.com', '30082006Da', 0, NULL, '0');
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
